@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingredient Substitutes | FlavorForge</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg?v=3">
+    <link rel="shortcut icon" href="assets/logo.svg?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="glass-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.svg" alt="FlavorForge Logo">
+                <span>FlavorForge</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="substitutes.html" class="active">Substitutes</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><button id="theme-toggle">🌙</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="substitute-hero">
+            <div class="container">
+                <div class="sub-header-content">
+                    <h1>Kitchen Savior</h1>
+                    <p>Missing an ingredient? Find the perfect alternative instantly.</p>
+                </div>
+
+                <div class="glass-card search-container center-search">
+                    <form id="substitute-form">
+                        <div class="input-group">
+                            <input type="text" id="ingredient-input" placeholder="What are you missing? (e.g. heavy cream)" required autocomplete="off">
+                            <button type="submit" class="btn-primary">Find Substitute</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="quick-tags">
+                    <span>Popular swaps:</span>
+                    <button class="tag-btn" data-ing="butter">Butter</button>
+                    <button class="tag-btn" data-ing="egg">Eggs</button>
+                    <button class="tag-btn" data-ing="heavy cream">Heavy Cream</button>
+                    <button class="tag-btn" data-ing="baking powder">Baking Powder</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="container results-section">
+            <div id="substitute-results" class="substitute-grid">
+                <div class="empty-state">
+                    <p> Enter an ingredient above to see alternatives.</p>
+                 </div>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/substitutes.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | FlavorForge</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg?v=3">
+    <link rel="shortcut icon" href="assets/logo.svg?v=3">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="glass-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.svg" alt="FlavorForge Logo">
+                <span>FlavorForge</span>
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="substitutes.html">Substitutes</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><button id="theme-toggle">🌙</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="about-hero">
+            <h1 class="animate-fade-up">About FlavorForge</h1>
+            <p class="animate-fade-up delay-1">Your ultimate companion for discovering delicious recipes</p>
+        </section>
+
+        <section class="container about-container">
+            
+            <div class="glass-card about-card animate-fade-up delay-2">
+                <h2>What is FlavorForge?</h2>
+                <p>FlavorForge is a modern, user-friendly web application designed to help you discover amazing recipes based on ingredients you have or dishes you're craving. Whether you're a seasoned chef or just starting your culinary journey, FlavorForge makes it easy to find the perfect recipe.</p>
+                <p style="margin-top: 1rem;">Built with modern web technologies and powered by the comprehensive Spoonacular API, we provide access to thousands of recipes with detailed instructions, ingredient lists, and nutritional information.</p>
+            </div>
+
+            <div class="glass-card about-card animate-fade-up delay-3">
+                <h2>Key Features</h2>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Ingredient-based recipe search</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Multi-ingredient search support</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Dark mode toggle</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Responsive design for all devices</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Save favorite recipes</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Detailed cooking instructions</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Nutrition information</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="check-icon">✓</span>
+                        <span>Powered by Spoonacular API</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 2rem; opacity: 0.7;">
+                <button id="clear-cache-btn" class="btn-text" style="font-size: 0.9rem;">Clear App Cache</button>
+                <span id="cache-msg" style="margin-left: 10px; font-size: 0.9rem;"></span>
+            </div>
+
+        </section>
+    </main>
+
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script>
+        // Inline script for the cache button
+        document.getElementById('clear-cache-btn').addEventListener('click', () => {
+            localStorage.clear();
+            document.getElementById('cache-msg').textContent = "Cache cleared!";
+            setTimeout(() => document.getElementById('cache-msg').textContent = "", 2000);
+        });
+    </script>
+</body>
+</html>

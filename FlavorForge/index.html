@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavorForge | Discover Delicious Recipes</title>
+    
+    <link rel="icon" type="image/svg+xml" href="assets/logo.svg?v=2">
+    <link rel="shortcut icon" href="assets/logo.svg?v=2">
+    
+    <link rel="stylesheet" href="css/styles.css">
+    </head>
+<body>
+    <header class="glass-header">
+        
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.svg" alt="FlavorForge Logo" width="40" height="40">
+                <span>FlavorForge</span>
+            </a>
+            <button class="mobile-toggle" aria-label="Toggle menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav id="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="substitutes.html">Substitutes</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><button id="theme-toggle" aria-label="Toggle Dark Mode">🌙</button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero hero-with-bg-image"> <div class="container hero-content">
+                <h1 class="animate-fade-up">Discover Delicious Recipes</h1> <p class="animate-fade-up delay-1">Search thousands of recipes and find your next favorite meal.</p> <div class="search-tabs animate-fade-up delay-2">
+                    <button class="tab-btn active" data-target="search-natural">Find Recipe</button>
+                    <button class="tab-btn" data-target="search-pantry">By Ingredients</button>
+                </div>
+
+                <div class="search-container glass-card animate-fade-up delay-3">
+                    <form id="search-natural" class="search-form active" action="search.html" method="GET">
+                        <div class="input-group">
+                            <input type="text" name="query" placeholder="Search recipes or ingredients (e.g., pasta OR paneer,tomato,onion)" required aria-label="Search recipes"> <button type="submit" class="btn-primary">Search</button>
+                        </div>
+                    </form>
+
+                    <form id="search-pantry" class="search-form" action="search.html" method="GET">
+                        <div class="input-group">
+                            <input type="text" name="ingredients" placeholder="tomato, onion, cheese, basil" required aria-label="Enter ingredients separated by commas">
+                            <button type="submit" class="btn-primary">Find Meals</button>
+                        </div>
+                        <small class="hint">Separate ingredients with commas</small>
+                    </form>
+                </div>
+            </div>
+            <div class="hero-bg-overlay"></div>
+        </section>
+
+        <section class="container favorites-section" id="favorites-preview" style="display:none;">
+            <h2>Your Favorites</h2>
+            <div class="grid-row" id="fav-grid"></div>
+        </section>
+
+        <section class="secondary-hero container text-center">
+            <img src="assets/logo.svg" alt="FlavorForge Logo Icon" width="60" height="60" style="margin: 0 auto 1rem auto; display: block; filter: drop-shadow(0 0 5px rgba(0,0,0,0.1));">
+            <h2>Start Your Culinary Journey</h2>
+            <p>Search by recipe name or enter multiple ingredients separated by commas</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 FlavorForge. Powered by Spoonacular API.</p>
+        </div>
+    </footer>
+
+    <script type="module" src="js/config.js"></script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
