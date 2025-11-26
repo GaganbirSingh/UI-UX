@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - Shubh Kamna Travels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Shubh Kamna Travels</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Book Your Dream Vacation</h2>
+            <p>Fill out the form below. Our live price estimator will help you plan your budget.</p>
+            
+            <form class="booking-form" novalidate>
+                <div class="form-group">
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="package">Select Package:</label>
+                    <select id="package" name="package" required>
+                        <option value="">--Choose a Package--</option>
+                        <option value="4500">Himalayan Bliss (₹4,500/night)</option>
+                        <option value="6000">Coastal Dreams (₹6,000/night)</option>
+                        <option value="5500">Backwater Magic (₹5,500/night)</option>
+                        <option value="5000">Royal Rajasthan (₹5,000/night)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="start-date">Travel Start Date:</label>
+                    <input type="date" id="start-date" name="start-date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="end-date">Travel End Date:</label>
+                    <input type="date" id="end-date" name="end-date" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="travelers">Number of Travelers:</label>
+                    <input type="number" id="travelers" name="travelers" min="1" value="1" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="promo-code">Promo Code:</label>
+                    <input type="text" id="promo-code" name="promo-code" placeholder="e.g., EARLYBIRD">
+                </div>
+                
+                <div class="form-group">
+                    <label for="requests">Special Requests:</label>
+                    <textarea id="requests" name="requests" rows="4"></textarea>
+                </div>
+
+                <div id="price-estimator">
+                    Estimated Total: ₹0
+                </div>
+                
+                <button type="submit" id="submit-btn" class="btn" disabled>Submit Booking Request</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Shubh Kamna Travels. All Rights Reserved.</p>
+    </footer>
+
+    <script src="booking.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

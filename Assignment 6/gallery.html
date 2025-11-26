@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Shubh Kamna Travels</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html" class="logo">Shubh Kamna Travels</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="packages.html">Packages</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Our Destination Gallery</h2>
+            <p>A glimpse of the beautiful places you can visit with us. Click on any image to view it larger.</p>
+            
+            <div class="gallery-grid">
+                <figure class="gallery-item">
+                    <img src="IMG-20250827-WA0005.jpg" alt="Spiti Valley" data-large="IMG-20250827-WA0005.jpg" data-caption="A serene road through Spiti Valley">
+                    <figcaption>Spiti Valley</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="IMG-20250827-WA0010.jpg" alt="Kaza" data-large="IMG-20250827-WA0010.jpg" data-caption="River flowing through the Kaza valley">
+                    <figcaption>Kaza</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="IMG-20250821-WA0005.jpg" alt="Lahaul Valley" data-large="IMG-20250821-WA0005.jpg" data-caption="Snow-capped peaks in Lahaul Valley">
+                    <figcaption>Lahaul Valley</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="IMG-20250827-WA0009.jpg" alt="Himalayan Road" data-large="IMG-20250827-WA0009.jpg" data-caption="Scenic drive in the Himalayas">
+                    <figcaption>Himalayan Roads</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="IMG-20250827-WA0006.jpg" alt="Kunzum Pass" data-large="IMG-20250827-WA0006.jpg" data-caption="The majestic Kunzum Pass in winter">
+                    <figcaption>Kunzum Pass</figcaption>
+                </figure>
+                <figure class="gallery-item">
+                    <img src="IMG-20250827-WA0008.jpg" alt="Narkanda" data-large="IMG-20250827-WA0008.jpg" data-caption="Lush green mountains of Narkanda">
+                    <figcaption>Narkanda</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+    
+    <div id="galleryModal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <div id="modalCaption" class="modal-caption"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Shubh Kamna Travels. All Rights Reserved.</p>
+    </footer>
+
+    <script src="gallery.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
